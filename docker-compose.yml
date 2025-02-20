@@ -1,0 +1,37 @@
+version: '3.8'
+services:
+  node1:
+    build: .
+    environment:
+      - PORT=9001
+      - BLOCKCHAIN_FILE=blockchain1.json
+      - ACCOUNT_FILE=accounts1.json
+    ports:
+      - "9001:9001"
+
+  node2:
+    build: .
+    environment:
+      - PORT=9002
+      - BLOCKCHAIN_FILE=blockchain2.json
+      - ACCOUNT_FILE=accounts2.json
+    ports:
+      - "9002:9002"
+
+  node3:
+    build: .
+    environment:
+      - PORT=9003
+      - BLOCKCHAIN_FILE=blockchain3.json
+      - ACCOUNT_FILE=accounts3.json
+    ports:
+      - "9003:9003"
+
+  node4:
+    build: .
+    environment:
+      - PORT=9004
+      - BLOCKCHAIN_FILE=blockchain4.json
+      - ACCOUNT_FILE=accounts4.json
+    ports:
+      - "9004:9004"
